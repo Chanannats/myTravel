@@ -10,17 +10,7 @@ var travelRouter = require('./routes/travel');
 var historyRouter = require('./routes/history');
 var locateRouter = require('./routes/locate');
 var favPlacesRouter = require('./routes/favPlaces');
-var kohHuYongRouter = require('./routes/kohHuYong');
-var kohPaYoungRouter = require('./routes/kohPaYoung');
-var kohPaYunRouter = require('./routes/kohPaYun');
-var kohMeangRouter = require('./routes/kohMeang');
-var kohPaYooRouter = require('./routes/kohPaYoo');
-var kohHinRouter = require('./routes/kohHin');
-var kohSimilanRouter = require('./routes/kohSimilan');
-var kohBagooRouter = require('./routes/kohBagoo');
-var kohHaRouter = require('./routes/kohHa');
-var kohTachaiRouter = require('./routes/kohTachai');
-var kohBonRouter = require('./routes/kohBon');
+
 var app = express();
 
 // view engine setup
@@ -35,21 +25,13 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', indexRouter);
 app.use('/users', usersRouter);
+
 app.use('/travel', travelRouter);
 app.use('/history', historyRouter);
 app.use('/locate', locateRouter);
 app.use('/favPlaces', favPlacesRouter);
-app.use('/kohHuYong', kohHuYongRouter);
-app.use('/kohPaYoung', kohPaYoungRouter);
-app.use('/kohPaYun', kohPaYunRouter);
-app.use('/kohMeang', kohMeangRouter);
-app.use('/kohPayoo', kohPaYooRouter);
-app.use('/kohHin', kohHinRouter);
-app.use('/kohSimilan', kohSimilanRouter);
-app.use('/kohBagoo', kohBagooRouter);
-app.use('/kohHa', kohHaRouter);
-app.use('/kohTachai', kohTachaiRouter);
-app.use('/kohBon', kohBonRouter);
+
+
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
     next(createError(404));

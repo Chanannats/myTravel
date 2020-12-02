@@ -59,7 +59,7 @@
                     <li class="nav-item dropdown ml-auto">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-display="static" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Profile</a>
                         <div class="dropdown-menu dropdown-menu-lg-right" aria-labelledby="navbarDropdown">
-                            <a class="dropdown-item" href="/favPlaces">สิ่งที่ฉันถูกใจ</a>
+                            <a class="dropdown-item" href="/login">เข้าสู่ระบบ</a>
                             <a class="dropdown-item" href="#">ออกจากระบบ</a>
                         </div>
                     </li>
@@ -122,7 +122,7 @@
                         <div class="card-body">
                             <h5 class="card-title">เกาะบอน</h5>
                             <p class="card-text"> เกาะนี้ไม่มีชายหาดแต่เป็นสวรรค์ของคนรักการดำน้ำลึก เพราะมีแนวปะการังน้ำลึกที่สมบูรณ์และสวยงาม</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/kohBon" class="btn btn-primary">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                 </div>
@@ -133,7 +133,7 @@
                         <div class="card-body">
                             <h5 class="card-title">เกาะห้า</h5>
                             <p class="card-text">เกาะหินลูกเล็กๆ ที่ไม่มีสิ่งปลูกสร้างใดๆ ทว่าเป็นที่จอดเรือหลบลมที่ดีรายล้อมด้วยธรรมชาติและปะการังมากมาย </p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/kohHa" class="btn btn-primary">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                 </div>
@@ -144,7 +144,7 @@
                         <div class="card-body">
                             <h5 class="card-title">เกาะบางู</h5>
                             <p class="card-text">เกาะรูปหัวกะโหลก เต็มไปด้วยปะการัง หุบเหวลึก ปลาทะเล กองหินคริสต์มาสพอยท์หลากหลายสีสรรค์สวยงาม</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/kohBagoo" class="btn btn-primary">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                 </div>
@@ -155,7 +155,7 @@
                         <div class="card-body">
                             <h5 class="card-title">เกาะตาชัย</h5>
                             <p class="card-text">มีหาดทรายขาวสะอาดสวยงามและลานกางเต็นท์ รวมถึงมีจุดดำน้ำตื้นบริเวณรอบๆเกาะ ที่สามารถพบฉลามวาฬได้บ่อย</p>
-                            <a href="#" class="btn btn-primary">Go somewhere</a>
+                            <a href="/kohTachai" class="btn btn-primary">ดูเพิ่มเติม</a>
                         </div>
                     </div>
                 </div>
@@ -171,7 +171,13 @@
             <div class="row">
                 <div class="col">
                     <p>updateCovid</p>
-                    <iframe class="covid" src="https://covid19.th-stat.com/th/share/dashboard"></iframe>
+                    <div class="card text-white bg-secondary mb-3" style="width: 32rem; height: 22rem;">
+                        <div class="card-header">Header</div>
+                        <div class="card-body">
+                            <h5 class="card-title">Secondary card title</h5>
+                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                        </div>
+                    </div>
                 </div>
 
                 <div class="col">
@@ -191,7 +197,7 @@
             <h1>กิจกรรมแนะนำ</h1>
             <div class="row">
                 <div class="col">
-                    <a href="#">
+                    <a href="/kohMeang">
                         <figure class="figure">
                             <img src="images/ac01.jpg" class="rounded">
                             <figcaption class="figure-caption">
@@ -202,7 +208,7 @@
                 </div>
 
                 <div class="col">
-                    <a href="#">
+                    <a href="/kohHuYong">
                         <figure class="figure">
                             <img src="images/ac02.jpg" class="rounded">
                             <figcaption class="figure-caption">
@@ -213,7 +219,7 @@
                 </div>
 
                 <div class="col">
-                    <a href="#">
+                    <a href="/kohSimilan">
                         <figure class="figure">
                             <img src="images/ac03.jpg" class="rounded">
                             <figcaption class="figure-caption">
@@ -225,7 +231,7 @@
 
                 <div class="row">
                     <div class="col">
-                        <a href="#">
+                        <a href="/kohHa">
                             <figure class="figure">
                                 <img src="images/ac04.jpg" class="rounded">
                                 <figcaption class="figure-caption">
@@ -236,7 +242,7 @@
                     </div>
 
                     <div class="col">
-                        <a href="#">
+                        <a href="/kohBagoo">
                             <figure class="figure">
                                 <img src="images/ac05.jpg" class="rounded">
                                 <figcaption class="figure-caption">
@@ -247,7 +253,7 @@
                     </div>
 
                     <div class="col">
-                        <a href="#">
+                        <a href="/kohMeang">
                             <figure class="figure">
                                 <img src="images/ac06.jpg" class="rounded">
                                 <figcaption class="figure-caption">
@@ -326,6 +332,8 @@
             </div>
         </div>
     </div>
+    <div id="show5"></div>
+
     <!-- Footer end -->
 
     <!-- Optional JavaScript -->
@@ -333,6 +341,33 @@
     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+    <script>
+        document.getElementById("show5").innerHTML = covid();
+
+        function covid() {
+            var url = 'https://covid19.th-stat.com/api/open/cases';
+            fetch(url)
+                .then((r) => r.json())
+                .then(function(data) {
+                    var x = 0; //จำนวนผู้ป่วย
+                    var y = 0; //หายแล้ว
+                    var z = 0; //กำลังรักษา
+                    for (i = 0; i < data.Data.length; i++) {
+                        if (data.Data[i].ProvinceId == 34) {
+                            //https://www.govesite.com/uploads/20150616220039Pp9UPrr/20180720112427_3_hDHa8tk.pdf อันนี้ลำดีบจังหวัด
+                            //ลำดับที่34คือจังหวัด
+                            x++;
+                            if (data.Data[i].StatQuarantine == 0) {
+                                y++;
+                            } else z++;
+                        }
+                    }
+                    $('#show5').html("จำนวนผู้ป่วยทั้งหมดในจังหวัดพังงา : " + x + " คน" + "<br>" +
+                        "รักษาหายแล้วจำนวน : " + y + " คน" + "<br>" +
+                        "กำลังรักษาจำนวน : " + z + " คน");
+                });
+        };
+    </script>
 </body>
 
 </html>
