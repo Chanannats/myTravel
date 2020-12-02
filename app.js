@@ -9,7 +9,7 @@ var usersRouter = require('./routes/users');
 var travelRouter = require('./routes/travel');
 var historyRouter = require('./routes/history');
 var locateRouter = require('./routes/locate');
-var favPlacesRouter = require('./routes/favPlaces');
+
 
 var app = express();
 
@@ -29,7 +29,7 @@ app.use('/users', usersRouter);
 app.use('/travel', travelRouter);
 app.use('/history', historyRouter);
 app.use('/locate', locateRouter);
-app.use('/favPlaces', favPlacesRouter);
+
 
 
 // catch 404 and forward to error handler

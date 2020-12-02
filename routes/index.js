@@ -18,10 +18,10 @@ var db = mysql.createConnection({
     host: 'localhost',
     user: 'root',
     password: '',
-    database: 'accounts',
+    database: 'mysql',
 });
 
-db.connect((err) => {
+db.connect(function(err) {
     if (err) {
         console.log("database connect failed...");
     } else {

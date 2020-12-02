@@ -18,7 +18,7 @@
     <!-- nav start -->
     <nav class="navbar navbar-expand-md navbar-dark bg-dark fixed-top">
         <a class="navbar-brand" href="#">
-            <img src="https://getbootstrap.com/docs/4.3/assets/brand/bootstrap-solid.svg" width="30" height="30" class="d-inline-block align-top" alt=""> SIMILAN
+             SIMILAN
         </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
@@ -175,7 +175,7 @@
                         <div class="card-header">Header</div>
                         <div class="card-body">
                             <h5 class="card-title">Secondary card title</h5>
-                            <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                            <p id="show"></p>
                         </div>
                     </div>
                 </div>
@@ -332,7 +332,7 @@
             </div>
         </div>
     </div>
-    <div id="show5"></div>
+
 
     <!-- Footer end -->
 
@@ -342,27 +342,27 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous"></script>
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
     <script>
-        document.getElementById("show5").innerHTML = covid();
+        document.getElementById("show").innerHTML = covid(); // 
 
         function covid() {
-            var url = 'https://covid19.th-stat.com/api/open/cases';
+            var url = 'https://covid19.th-stat.com/api/open/cases'; // get ข้อมูลมา ผ่าน fetch
             fetch(url)
                 .then((r) => r.json())
                 .then(function(data) {
                     var x = 0; //จำนวนผู้ป่วย
                     var y = 0; //หายแล้ว
                     var z = 0; //กำลังรักษา
-                    for (i = 0; i < data.Data.length; i++) {
+                    for (i = 0; i < data.Data.length; i++) { // วนลูปเท่ารอบ data ทั้งหมด
                         if (data.Data[i].ProvinceId == 34) {
                             //https://www.govesite.com/uploads/20150616220039Pp9UPrr/20180720112427_3_hDHa8tk.pdf อันนี้ลำดีบจังหวัด
                             //ลำดับที่34คือจังหวัด
                             x++;
-                            if (data.Data[i].StatQuarantine == 0) {
+                            if (data.Data[i].StatQuarantine == 0) { // เช็คว่า stateQuarantin หายแล้วกี่คน กำลังรักษากี่คน
                                 y++;
                             } else z++;
                         }
                     }
-                    $('#show5').html("จำนวนผู้ป่วยทั้งหมดในจังหวัดพังงา : " + x + " คน" + "<br>" +
+                    $('#show').html("จำนวนผู้ป่วยทั้งหมดในจังหวัดพังงา : " + x + " คน" + "<br>" +
                         "รักษาหายแล้วจำนวน : " + y + " คน" + "<br>" +
                         "กำลังรักษาจำนวน : " + z + " คน");
                 });
